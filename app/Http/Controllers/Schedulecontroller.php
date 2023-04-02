@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\MOdels\schedule;
+use App\Models\Schedule;
 
 class schedulecontroller extends Controller
 {
     public function index(Schedule $schedule)
     {
-        return $schedule->get();
+        return view ('schedules/index')->with(['schedules' => $schedule->getByLimit()]);
     }
 }

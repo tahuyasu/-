@@ -13,4 +13,4 @@ use App\Http\Controllers\Schedulecontroller;
 |
 */
 
-Route::get('/schedules', [schedulecontroller::class,'index']);
+Route::get('/' , [schedulecontroller::class, 'index']);
