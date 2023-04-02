@@ -11,4 +11,9 @@ class schedulecontroller extends Controller
     {
         return view ('schedules/index')->with(['schedules' => $schedule->getByLimit()]);
     }
+    
+    public function show(Post $post)
+    {
+        return view('schedules/show')->with(['schedule' => $schedule]);
+    }
 }
