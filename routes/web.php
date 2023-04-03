@@ -13,5 +13,6 @@ use App\Http\Controllers\Schedulecontroller;
 |
 */
 
-Route::get('/' , [Schedulecontroller::class, 'index']);
+Route::get('/' , [ScheduleController::class, 'index']);
+Route::get('/schedules/create' , [ScheduleController::class,'create']);
 Route::get('/schedules/{schedule}', [ScheduleController::class ,'show']);
